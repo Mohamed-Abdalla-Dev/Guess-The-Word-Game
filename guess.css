@@ -19,10 +19,11 @@ h1 {
   text-align: center;
   margin: 20px auto;
   display: flex;
-  width: 1000px;
-  height: 100vh;
+  width: 100%;
+  max-width: 1000px;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   .game-area {
     text-align: center;
     .inputs > div {
@@ -40,9 +41,10 @@ h1 {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 500px;
+      width: 100%;
       margin: 30px auto;
       gap: 10px;
+      max-width: 500px;
       .check {
         background-color: var(--primary-color);
         color: white;
@@ -73,7 +75,8 @@ h1 {
     }
     input {
       margin: 0 5px;
-      width: 60px;
+      width: 100%;
+      max-width: 60px;
       height: 60px;
       text-align: center;
       font-size: 45px;
@@ -130,6 +133,16 @@ h1 {
     }
   }
 }
+@media (max-width: 991px) {
+  .guess-game {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .inputs > div span {
+    display: none;
+  }
+}
 .message {
   text-align: center;
   font-weight: bold;
@@ -155,4 +168,9 @@ footer {
   left: 0;
   background-color: #5a1616;
   color: white;
+}
+@media (max-width: 768px) {
+  footer {
+    position: relative;
+  }
 }
